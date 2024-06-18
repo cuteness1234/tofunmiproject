@@ -29,8 +29,12 @@ def read_number(e=None):
     except ValueError:
         label_str.set("Please enter a valid integer.")
 
+def clear_screen():
+    el.delete(0, tk.END)
+    label_str.set("Type a number between 1 and 100")
+
 master = tk.Tk()
-master.geometry("300x100")
+master.geometry("300x300")
 master.title("Number Guessing Game")
 
 label_str = tk.StringVar()
@@ -42,6 +46,7 @@ el.grid(row=1, column=0)
 
 el.bind("<Return>", read_number)
 tk.Button(master, text='Show', command=read_number).grid(row=2, column=0, sticky=tk.W, pady=4)
+tk.Button(master, text='Clear', command=clear_screen).grid(row=3, column=0, sticky=tk.W, pady=4)
 
 master.configure(background='cyan')
 master.mainloop()

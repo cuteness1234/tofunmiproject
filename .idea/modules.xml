@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../../python_course/ekids/.idea/ekids.iml" filepath="$PROJECT_DIR$/../../python_course/ekids/.idea/ekids.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/tofunmiproject.iml" filepath="$PROJECT_DIR$/.idea/tofunmiproject.iml" />
     </modules>
   </component>
