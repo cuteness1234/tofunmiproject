@@ -14,6 +14,8 @@ def check_guess(guess):
     if guess < number:
         lower_bound = guess + 1
         return f"Please type a number between {lower_bound} and {upper_bound}: ", False
+    elif guess > 100:
+        return "The number is greater than 100. Try again: ", False
     else:
         upper_bound = guess - 1
         return f"Please type a number between {lower_bound} and {upper_bound}: ", False
