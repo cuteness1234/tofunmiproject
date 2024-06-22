@@ -33,7 +33,7 @@ def read_number(e=None):
 
 def clear_screen():
     el.delete(0, tk.END)
-    label_str.set(f"Type a number between 1 and 100. Your remaining point is: {points}")
+    label_str.set(f"Type a number between {lower_bound} and {upper_bound}. Your remaining point is: {points}")
 
 master = tk.Tk()
 master.geometry("600x300")
