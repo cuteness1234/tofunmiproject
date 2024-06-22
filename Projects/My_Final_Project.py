@@ -13,7 +13,7 @@ def check_guess(guess):
     points -= 50
     if guess < number:
         lower_bound = guess + 1
-        return f"Please type a number between {lower_bound} and {upper_bound}: ", False
+        return f"Please type a number between {lower_bound} and {upper_bound}. Your current point is {points}: ", False
     elif guess > 100:
         return "The number is greater than 100. Try again: ", False
     else:
@@ -33,15 +33,15 @@ def read_number(e=None):
 
 def clear_screen():
     el.delete(0, tk.END)
-    label_str.set("Type a number between 1 and 100")
+    label_str.set(f"Type a number between 1 and 100. Your starting point is {points}")
 
 master = tk.Tk()
-master.geometry("300x300")
+master.geometry("500x300")
 master.title("Number Guessing Game")
 
 label_str = tk.StringVar()
 tk.Label(master, textvariable=label_str).grid(row=0)
-label_str.set("Type a number between 1 and 100")
+label_str.set(f"Type a number between 1 and 100. Your starting point is {points}")
 
 el = tk.Entry(master)
 el.grid(row=1, column=0)
